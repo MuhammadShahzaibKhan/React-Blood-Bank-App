@@ -9,12 +9,35 @@ export default function Donor() {
   const navigate = useNavigate();
   const userData = useSelector((data: any) => data.user);
   console.log(userData);
+  const blood = userData && userData && userData.personalDetails.bloodgroup;
+
+  const O = "O";
+  const A = "A";
+  const B = "B";
+  const AB = "AB";
 
   let loginUser = () => {
     fbGet("users")
       .then((res: any) => {
-        setUser([...res]);
-        console.log(user);
+        // setUser(res);
+        if (blood == O) {
+          const b = res.filter((x: any) => x.bloodG == blood);
+          setData([...b]);
+        }
+        if (blood == A) {
+          const a = res.filter((x: any) => x.bloodG == O);
+          const b = res.filter((x: any) => x.bloodG == blood);
+          setData([...a, ...b]);
+        }
+        if (blood == B) {
+          const a = res.filter((x: any) => x.bloodG == O);
+          const b = res.filter((x: any) => x.bloodG == blood);
+          setData([...a, ...b]);
+        }
+        if (blood == AB) {
+          const a = res.map((x: any) => x);
+          setData([...a]);
+        }
       })
       .catch((err: any) => {
         console.log(err);
