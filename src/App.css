@@ -1,38 +1,227 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-main {
+  background: #081b29;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* ============== Loader Style Start =============== */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: #000;
+}
+.wave {
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg, #0ef, #fff);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ============== Loader Style End =============== */
+
+/* ============== Sign Up/Log In Style Start =============== */
+
+.form-main {
+  background: transparent;
+  width: 750px;
+  height: 600px;
+  border: 2px solid #0ef;
+  box-shadow: 0 0 25px #0ef;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
+
+.bg-style {
+  position: absolute;
+  top: -400px;
+  left: 50px;
+  width: 850px;
+  height: 600px;
+  background: linear-gradient(45deg, #081b29, #0ef);
+  border-bottom: 3px solid #0ef;
+  transform: rotate(13deg) skewY(48deg);
+  transform-origin: bottom-right;
+  z-index: -1;
+}
+
+.input-box input {
+  color: #fff;
+  background: transparent;
+  width: 100%;
+  padding: 6px;
+  outline: none;
+  border-bottom: 2px solid #fff;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+  font-weight: 600;
+}
+
+.input-box input:focus {
+  border-bottom: 2px solid #0ef;
+}
+
+.SKbtn {
+  color: #fff;
+  border: 2px solid #0ef;
+  background: rgb(8, 27, 41);
+  background: linear-gradient(
+    0deg,
+    rgba(8, 27, 41, 1) 10%,
+    rgba(0, 238, 255, 1) 60%
+  );
+  padding: 10px;
+}
+
+.SKbtn:hover {
+  background: rgb(8, 27, 41);
+  background: linear-gradient(
+    180deg,
+    rgba(8, 27, 41, 1) 10%,
+    rgba(0, 238, 255, 1) 60%
+  );
+}
+
+.select-bg{
+  background-color: #fff;
+}
+
+.reg-link a {
+  color: #0ef;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signp-context {
+  z-index: 1;
+}
+
+/* ============== Sign Up/Log In Style End =============== */
+
+/* ============== Task Style Start =============== */
+
+.task-main {
+  height: 100vh;
+}
+
+.task-heading {
+  text-shadow: 0px 6px 6px rgba(0, 238, 255, 1);
+}
+
+.tasks-context {
+  border: 2px solid #0ef;
+  box-shadow: 0 0 25px #0ef;
+}
+
+/* ============== Task Style End =============== */
+
+
+
+/* ============== Quiz Admin Style Start =============== */
+
+/* ============== Quiz Admin Left Panel Style Start =============== */
+
+.left-panel-main{
+  background: #081b29;
+  height: 100vh;
+}
+
+.img-main{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #0ef;
+}
+
+.mybtn button{
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.quiz-input input {
+  color: #081b29;
+  background: transparent;
+  width: 100%;
+  padding: 6px;
+  outline: none;
+  border-bottom: 2px solid #081b29;
+}
+
+.quiz-input input::placeholder {
+  color: #081b29;
+  font-weight: 600;
+}
+
+.quiz-input input:focus {
+  border-bottom: 2px solid #0ef;
+}
+
+
+/* ============== Quiz Admin Left Panel Style End =============== */
+
+/* ============== Quiz Admin Style End =============== */
+
+/* ============== Button Component Style Start =============== */
+
+.skBtn{
+  color: #fff !important;
+  border: 2px solid #0ef;
+  padding: 10px;
+}
+
+.red-btn:hover{
+  background-color: #ef233c !important;
+}
+/* ============== Button Component Style End =============== */
+
