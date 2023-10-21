@@ -22,21 +22,21 @@ export default function Donor() {
         // setUser(res);
         if (blood == O) {
           const b = res.filter((x: any) => x.bloodG == blood);
-          setData([...b]);
+          setUser([...b]);
         }
         if (blood == A) {
           const a = res.filter((x: any) => x.bloodG == O);
           const b = res.filter((x: any) => x.bloodG == blood);
-          setData([...a, ...b]);
+          setUser([...a, ...b]);
         }
         if (blood == B) {
           const a = res.filter((x: any) => x.bloodG == O);
           const b = res.filter((x: any) => x.bloodG == blood);
-          setData([...a, ...b]);
+          setUser([...a, ...b]);
         }
         if (blood == AB) {
           const a = res.map((x: any) => x);
-          setData([...a]);
+          setUser([...a]);
         }
       })
       .catch((err: any) => {
