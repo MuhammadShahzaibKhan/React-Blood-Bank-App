@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { fbGet, fbLogOut } from "../config/firebase/firebasemethods";
 import Button from "@mui/material/Button";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Donor() {

@@ -21,17 +21,17 @@ export default function Donor() {
       .then((res: any) => {
         // setUser(res);
         if (blood == O) {
-          const b = res.filter((x: any) => x.bloodG == blood);
+          const b = res.filter((x: any) => x.bloodgroup == blood);
           setUser([...b]);
         }
         if (blood == A) {
-          const a = res.filter((x: any) => x.bloodG == O);
-          const b = res.filter((x: any) => x.bloodG == blood);
+          const a = res.filter((x: any) => x.bloodgroup == O);
+          const b = res.filter((x: any) => x.bloodgroup == blood);
           setUser([...a, ...b]);
         }
         if (blood == B) {
-          const a = res.filter((x: any) => x.bloodG == O);
-          const b = res.filter((x: any) => x.bloodG == blood);
+          const a = res.filter((x: any) => x.bloodgroup == O);
+          const b = res.filter((x: any) => x.bloodgroup == blood);
           setUser([...a, ...b]);
         }
         if (blood == AB) {
